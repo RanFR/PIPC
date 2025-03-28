@@ -1,0 +1,33 @@
+mpc:
+  horizon: 5
+  step: 1.0 # 离散时间
+
+  R_p: 1.0
+  R_v: 1.0
+  R_a: 1.0
+  R_u: 1.0
+  R_u_con: 0.2
+  R_pN: 1.0
+  R_vN: 1.0
+  R_aN: 1.0
+
+  vx_min: -3.0
+  vy_min: -3.0
+  vz_min: -3.0
+  vx_max: 3.0
+  vy_max: 3.0
+  vz_max: 3.0
+
+  ax_min: -6.0
+  ay_min: -6.0
+  az_min: -6.0
+  ax_max: 6.0
+  ay_max: 6.0
+  az_max: 6.0
+
+  ux_min: -10.0
+  uy_min: -10.0
+  uz_min: -10.0
+  ux_max: 10.0
+  uy_max: 10.0
+  uz_max: 10.0

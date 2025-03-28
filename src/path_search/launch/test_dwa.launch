@@ -1,0 +1,13 @@
+<launch>
+    <node name="test_dwa" pkg="path_search" type="test_dwa" output="screen">
+        <rosparam command="load" file="$(find path_search)/config/test_dwa.yaml" />
+    </node>
+
+    <node name="pointcloud_processor" pkg="pointcloud_processor" type="pointcloud_processor_node">
+        <param name="~pointcloud_processor/local_map" value="/virtual_map/pointcloud2" />
+        <param name="~pointcloud_processor/static_map" value="/virtual_map/static_map" />
+        <param name="~pointcloud_processor/obstacle_box" value="/virtual_map/obstacle_box" />
+    </node>
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find path_search)/rviz/test_dwa.rviz" />
+</launch>

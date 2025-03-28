@@ -1,0 +1,3 @@
+<launch>
+  <node name="gazebo_to_object" pkg="gazebo_to_object" type="gazebo_to_object_node" output="screen" />
+</launch>

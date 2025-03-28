@@ -1,0 +1,5 @@
+<launch>
+  <node name="pointcloud_processor" pkg="pointcloud_processor" type="pointcloud_processor_node" output="screen">
+    <rosparam command="load" file="$(find pointcloud_processor)/config/pointcloud_processor.yaml" />
+  </node>
+</launch>

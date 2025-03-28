@@ -1,0 +1,7 @@
+<launch>
+  <node name="benchmarking_node" pkg="benchmarking" type="benchmarking_node" output="screen">
+    <param name="odometry_topic" value="/lidar_slam/odom" />
+    <param name="obstacle_topic" value="/virtual_map/obstacle_box" />
+    <param name="target_topic" value="/goal" />
+  </node>
+</launch>

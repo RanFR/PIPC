@@ -1,0 +1,16 @@
+# VSCode config
+.vscode/
+
+# Ros build folders
+build/
+devel/
+src/CMakeLists.txt
+
+# Ros workspace
+.catkin_workspace
+
+# Format files
+.clang-format
+
+# Simulator
+src/mars_uav_sim

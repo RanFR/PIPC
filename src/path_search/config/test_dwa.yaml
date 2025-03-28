@@ -1,0 +1,13 @@
+path_search:
+  resolution: 0.1 # 地图分辨率
+  map_x_size: 40.0 # 地图x轴长度（包含正负半轴）
+  map_y_size: 40.0 # 地图y轴长度（包含正负半轴）
+  map_z_size: 5.0 # 地图z轴长度（包含正负半轴）
+  max_vel: 10.0
+  max_acc: 20.0
+  max_jerk: 30.0
+
+obstacles_prediction:
+  multi_points: /virtual_map/obstacle_box
+  pcd: predicted/pointcloud2
+  display_predicted_pcd: false

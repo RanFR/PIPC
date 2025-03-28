@@ -1,0 +1,81 @@
+---
+#----------------- MPC param -----------------#
+# 仿真设置
+simulation: true
+frequency: 100.0
+
+# 推力控制
+thrust_limit: 0.4
+hover_esti: false
+hover_perc: 0.7
+
+# Yaw控制
+yaw_ctrl_flag: true
+yaw_gain: 0.5
+
+# 安全距离
+safe_dis: 0.25
+
+# 局部地图设置
+map:
+  resolution: 0.1 # 地图分辨率
+  map_x_size: 50.0 # 地图x轴长度（包含正负半轴）
+  map_y_size: 30.0 # 地图y轴长度（包含正负半轴）
+  map_z_size: 5.0 # 地图z轴长度（包含正半轴，默认地面距离为0.0）
+
+# 障碍物预测
+obstacles_prediction:
+  obstacle_box: "/dynamic_obstacles" # 障碍物预测话题名称
+  # 预测障碍物的限制速度和加速度
+  limit_vel: 1.0
+  limit_acc: 0.1
+
+path_search:
+  max_vel: 2.0
+  max_acc: 3.0
+  max_jerk: 10.0
+  global_map_size_x_min: -1.5
+  global_map_size_x_max: 50.0
+  global_map_size_y_min: -5.0
+  global_map_size_y_max: 5.0
+  global_map_size_z_min: 0.1
+  global_map_size_z_max: 3.0
+  weight_heuristic_distance: 100.0
+  weight_static_obstacle_distance: 1.0
+  weight_reference_point_distance: 10.0
+  weight_dynamic_obstacle_uncertainty: 1.0
+  weight_future_position: 1.0
+
+mpc:
+  horizon: 16
+  step: 0.1 # 离散时间
+
+  R_p: 100.0
+  R_v: 1.0
+  R_a: 1.0
+  R_u: 1.0
+  R_u_con: 0.2
+  R_pN: 1.0
+  R_vN: 1.0
+  R_aN: 1.0
+
+  vx_min: -2.0
+  vy_min: -2.0
+  vz_min: -2.0
+  vx_max: 2.0
+  vy_max: 2.0
+  vz_max: 2.0
+
+  ax_min: -3.0
+  ay_min: -3.0
+  az_min: -3.0
+  ax_max: 3.0
+  ay_max: 3.0
+  az_max: 3.0
+
+  ux_min: -10.0
+  uy_min: -10.0
+  uz_min: -10.0
+  ux_max: 10.0
+  uy_max: 10.0
+  uz_max: 10.0

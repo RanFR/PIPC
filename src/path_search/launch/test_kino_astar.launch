@@ -1,0 +1,9 @@
+<launch>
+    <node name="test_kino_astar" pkg="path_search" type="test_kino_astar" output="screen">
+        <param name="obstacles_prediction/multi_points" value="/virtual_map/multi_points"
+            type="string" />
+        <param name="obstacles_prediction/display_predicted_pcd" value="true"
+            type="bool" />> </node>
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find path_search)/rviz/test_kino_astar.rviz" />
+</launch>

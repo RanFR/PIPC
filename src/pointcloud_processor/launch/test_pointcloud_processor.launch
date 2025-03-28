@@ -1,0 +1,10 @@
+<launch>
+    <node name="test_pointcloud_processor" pkg="pointcloud_processor" type="test_point_cloud_processor"
+        output="screen">
+        <remap from="~local_map" to="/onboard_detector/dynamic_point_cloud" />
+        <remap from="~dynamic_obstacles_pos" to="/onboard_detector/obstacle_box_msg" />
+
+    </node>
+
+    <!-- <node name="rviz" type="rviz" pkg="rviz" args="-d $(find point_cloud_processor)/rviz/test.rviz" /> -->
+</launch>

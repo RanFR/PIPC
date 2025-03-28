@@ -1,0 +1,5 @@
+<launch>
+    <node name="test_astar" pkg="path_search" type="test_astar" output="screen" />
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find path_search)/rviz/test_astar.rviz" />
+</launch>

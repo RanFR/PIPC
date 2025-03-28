@@ -1,0 +1,10 @@
+<launch>
+    <node name="test_obstacles_prediction" pkg="obstacles_prediction" type="test_obstacles_prediction" output="screen">
+        <param name="obstacles_prediction/obstacle_box" value="/dynamic_obstacles" />
+
+        <param name="obstacles_prediction/pcd" value="predicted/pointcloud2" type="str" />
+        <param name="obstacles_prediction/display_predicted_pcd" value="true" type="bool" />
+    </node>
+
+    <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find obstacles_prediction)/rviz/test.rviz" /> -->
+</launch>

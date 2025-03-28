@@ -1,0 +1,5 @@
+# 点云处理
+pointcloud_processor:
+  local_map: "/virtual_map/pointcloud2"
+  static_map: "/virtual_map/static_map"
+  obstacle_box: "/virtual_map/obstacle_box"

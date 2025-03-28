@@ -1,0 +1,16 @@
+<launch>
+    <arg name="map_type" default="six_const" />
+
+    <!-- 虚拟点云地图 -->
+    <node name="virtual_map" pkg="virtual_map" type="virtual_map_node" output="screen">
+        <remap from="~pcd" to="/virtual_map/pointcloud2" />
+        <remap from="~obstacle_box" to="/dynamic_obstacles" />
+
+        <!-- Map parameters -->
+        <param name="resolution" value="0.1" type="double" />
+        <param name="map_type" value="$(arg map_type)" type="str" />
+        <param name="frame_id" value="world" type="str" />
+        <param name="update_rate" value="10.0" type="double" />
+        <param name="fixed_wall/gap" value="2.0" type="double" />
+    </node>
+</launch>
